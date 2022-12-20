@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "github.com/victoorraphael/poc-hex-shelf/cmd/grpc/proto";
+
+import "google/protobuf/empty.proto";
+
+service HelloService {
+  rpc Hello(google.protobuf.Empty) returns (HelloResponse);
+}
+
+message HelloResponse {
+  string msg = 1;
+}
